@@ -1,7 +1,18 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useAppDispatch } from '../../hooks/redux';
+import { fetchFilms } from '../../store/reducers/actionCreators';
+import SearchBar from '../SearchBar';
 
 const Header: React.FC = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFilms({ value: 'Summer' }));
+  });
+
+  const { pathname } = useLocation();
+
   return (
     <header className="header">
       <div className="wrapper navigation">
@@ -12,6 +23,7 @@ const Header: React.FC = () => {
           About us
         </Link>
       </div>
+      {pathname === '/' ? <SearchBar /> : null}
     </header>
   );
 };

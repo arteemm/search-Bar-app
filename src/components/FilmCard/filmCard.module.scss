@@ -1,0 +1,16 @@
+.film-card {
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__image {
+    width: 200px;
+    height: 287px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

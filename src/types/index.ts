@@ -1,35 +1,19 @@
-type Card = {
-  id: string;
-  owner: string;
-  secret: string;
-  server: string;
-  farm: number;
-  title: string;
-  ispublic: number;
-  isfriend: number;
-  isfamily: number;
-  url_m: string;
-  height_m: number;
-  width_m: NumberConstructor;
+type Film = {
+  Title: string;
+  Year: string;
+  imdbID: string;
+  Type: string;
+  Poster: string;
 };
 
-type Value = {
+type ResponseFilms = {
+  Search: Film[];
+  totalResults: string;
+  Response: string;
+};
+
+type SearchParam = {
   value: string;
-  isDisabled: boolean;
-  arrCard: Card[];
 };
 
-type Photos = {
-  page: number;
-  pages: number;
-  perpage: number;
-  total: number;
-  photo: Card[];
-};
-
-type ResponseCard = {
-  photos: Photos;
-  stat: string;
-};
-
-export type { ResponseCard };
+export type { ResponseFilms, SearchParam, Film };

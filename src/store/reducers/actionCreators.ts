@@ -1,4 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { testApi } from '../../api';
+import { getFilms } from '../../api';
 
-export const getImages = createAsyncThunk('images', testApi);
+export const fetchFilms = createAsyncThunk('films', getFilms);

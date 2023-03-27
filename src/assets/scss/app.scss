@@ -1,3 +1,15 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import './variables.scss';
+
 body {
-  background-color: aqua;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
 }

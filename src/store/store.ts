@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import imagesSlice from './reducers/imagesSlice';
+import filmsSlice from './reducers/filmsSlice';
 
 const customizedMiddleware = getDefaultMiddleware({
   serializableCheck: false,
@@ -7,7 +7,7 @@ const customizedMiddleware = getDefaultMiddleware({
 
 export const store = configureStore({
   reducer: {
-    images: imagesSlice,
+    films: filmsSlice,
   },
   middleware: () => customizedMiddleware,
 });
