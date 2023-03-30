@@ -16,6 +16,9 @@ const initialState: StateTypeFilms = {
   error: null,
   searchParam: {
     value: 'Lord',
+    year: '',
+    type: 'all',
+    numberPage: 1,
   },
   options: '',
 };
@@ -26,6 +29,26 @@ export const filmsSlice = createSlice({
   reducers: {
     setSearchWord: (state: StateTypeFilms, action: PayloadAction<string>) => {
       state.searchParam.value = action.payload;
+    },
+
+    setSearchYear: (state: StateTypeFilms, action: PayloadAction<string>) => {
+      state.searchParam.year = action.payload;
+    },
+
+    setSearchType: (state: StateTypeFilms, action: PayloadAction<string>) => {
+      state.searchParam.type = action.payload;
+    },
+
+    setPrevPage: (state: StateTypeFilms) => {
+      state.searchParam.numberPage--;
+    },
+
+    setNextPage: (state: StateTypeFilms) => {
+      state.searchParam.numberPage++;
+    },
+
+    setOriginalPage: (state: StateTypeFilms) => {
+      state.searchParam.numberPage = 1;
     },
   },
   extraReducers: {

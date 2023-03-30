@@ -1,12 +1,12 @@
 .main {
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-top: 60px;
 
-  &__cards {
+  &__wrapper {
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

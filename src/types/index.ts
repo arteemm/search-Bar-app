@@ -14,6 +14,9 @@ type ResponseFilms = {
 
 type SearchParam = {
   value: string;
+  year?: string;
+  type: string;
+  numberPage: number;
 };
 
 export type { ResponseFilms, SearchParam, Film };

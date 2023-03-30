@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: solid #696e6e 0.5px;
+  text-align: center;
+  padding: 5px 0;
+  background-color: rgba(213, 247, 90, 0.3);
 
   &__image {
     width: 200px;

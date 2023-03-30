@@ -1,0 +1,30 @@
+.search-bar {
+  @extend %flex;
+
+  &__container {
+    @extend %flex;
+  }
+
+  &__options {
+    @extend %flex;
+  }
+
+  &__option {
+    @extend %flex;
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+
+    &_year {
+      width: 50px;
+    }
+  }
+}
+
+%flex {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}

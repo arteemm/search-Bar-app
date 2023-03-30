@@ -1,5 +1,7 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 @import './variables.scss';
+@import './button';
+@import './link';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -10,6 +12,26 @@ body {
   margin: 0 auto;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 p {
   margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
 }
