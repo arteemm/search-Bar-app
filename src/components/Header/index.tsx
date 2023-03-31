@@ -9,12 +9,14 @@ const Header: React.FC = () => {
   return (
     <header className={cl.header}>
       <div className={`wrapper ${cl.header__wrapper}`}>
-        <Link to="/" data-testid="main-link" className="link">
-          Main
-        </Link>
-        <Link to="/about" data-testid="about-link" className="link">
-          About us
-        </Link>
+        <div className={cl.header__links}>
+          <Link to="/" data-testid="main-link" className="link">
+            Main
+          </Link>
+          <Link to="/about" data-testid="about-link" className="link">
+            About us
+          </Link>
+        </div>
         {pathname === '/' ? <SearchBar /> : null}
       </div>
     </header>

@@ -35,3 +35,21 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: $content-width) {
+  .wrapper {
+    max-width: $small-content-width;
+  }
+}
+
+@media (max-width: $small-content-width) {
+  .wrapper {
+    max-width: $tablet-width;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper {
+    max-width: $mobile-width;
+  }
+}
