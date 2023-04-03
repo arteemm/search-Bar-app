@@ -1,7 +1,6 @@
 .main__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 15px;
-  align-items: center;
+  justify-content: space-between;
+  row-gap: 15px;
 }

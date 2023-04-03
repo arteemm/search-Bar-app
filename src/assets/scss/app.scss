@@ -3,8 +3,22 @@
 @import './button';
 @import './link';
 
+html {
+  font-size: 10px;
+  line-height: 10px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .wrapper {
@@ -37,18 +51,30 @@ fieldset {
 }
 
 @media (max-width: $content-width) {
+  body {
+    font-size: 1.6rem;
+  }
+
   .wrapper {
     max-width: $small-content-width;
   }
 }
 
 @media (max-width: $small-content-width) {
+  body {
+    font-size: 1.4rem;
+  }
+
   .wrapper {
     max-width: $tablet-width;
   }
 }
 
 @media (max-width: $tablet-width) {
+  body {
+    font-size: 1.2rem;
+  }
+
   .wrapper {
     max-width: $mobile-width;
   }

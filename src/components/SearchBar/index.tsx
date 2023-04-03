@@ -41,7 +41,9 @@ const SearchBar: React.FC = () => {
           value={value}
           className={cl['search-bar__input']}
         />
-        <button type="submit">Search</button>
+        <button type="submit" className={`button ${cl['search-bar__button']}`}>
+          Search
+        </button>
       </div>
       <div className={cl['search-bar__options']}>
         <div className={cl['search-bar__option']}>

@@ -13,5 +13,25 @@
 
   &__links {
     justify-self: center;
+    display: flex;
+    column-gap: 15px;
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header {
+    &__links {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__links {
+      font-size: 1.2rem;
+      column-gap: 5px;
+    }
   }
 }

@@ -1,14 +1,15 @@
 .film-card {
-  width: 170px;
-  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  text-align: center;
   background-color: rgba(213, 247, 90, 0.4);
   word-break:break-word;
   padding-bottom: 5px;
+  flex-basis: calc(20% - 8px);
+  height: 400px;
+  font-size: 1.8rem;
+  line-height: 1.1;
 
   &__image {
     width: 100%;
@@ -16,5 +17,29 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .film-card {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    height: 300px;
+
+    &__image {
+      height: 219px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .film-card {
+    font-size: 1rem;
+    line-height: 1.2;
+    height: 200px;
+
+    &__image {
+      height: 115px;
+    }
   }
 }
